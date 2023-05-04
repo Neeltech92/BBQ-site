@@ -1,0 +1,148 @@
+body, html {
+    margin: 0;
+    height: 100dvh;
+    width: 100vw;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 
+===========
+   LAYOUT
+===========
+*/
+
+body,
+.intro-sec,
+form,
+.form-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-sec {
+    flex: 1 50%;
+    justify-content: space-between;
+    padding: 0 2em;
+    align-self: stretch;
+    color: #fff;
+    text-shadow: 0 0 9px black;
+    background-image: url("https://keviniscooking.com/wp-content/uploads/2018/01/How-to-Make-Baby-Back-Ribs-square2.jpg"), linear-gradient(#ff713b, #ffa51d);
+    background-color: gray;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-sec {
+    flex: 1 50%;
+    padding: 0 4em;
+}
+
+.form-sec h3,
+.form-sec h4 {
+    margin: 0;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    text-align: inherit;
+    border-radius: 5px;
+    border: 1px solid;
+    margin: 7px 0;
+}
+
+input[type=submit] {
+    text-transform: uppercase;
+    border: none;
+    background: linear-gradient(270deg, #ff713b, #ffa51d);
+    color: #fff;
+    transform: scale(1);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+    transform: scale(1.07);
+    background: linear-gradient(#ff713b 25%, #ffa51d);
+    color: black;
+}
+
+.form-sec h3 {
+    margin-top: 2em;
+}
+
+/* 
+===========
+TYPOGRAPHY
+===========
+*/
+
+.form-sec  h4 {
+    letter-spacing: 1px;
+}
+
+span {
+    font-weight: 900;
+    display: block;
+}
+
+.small {
+    font-size: 10px;
+    border-top: 5px solid;
+    padding-top: 6px;
+    order: -1;
+}
+
+.intro-sec h1 {
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.small, 
+.intro-sec h3,
+.form-sec h4 {
+    color: #f18119;
+    text-transform: uppercase;
+}
+
+/* MEDIA QUERY */
+
+@media (min-width: 620px) {
+    body {
+        flex-direction: row;
+    }
+    
+    .form-sec {
+        padding: 0 2em;
+    }
+    
+    .form-sec *{
+        max-width: 400px;
+    }
+    
+    .form-sec, .intro-sec {
+        height: 100vh;
+        justify-content: center;
+    }
+    
+    .intro-sec h1 {
+        margin: auto auto 0;
+    }
+    
+    .intro-sec h3 {
+        margin: 0.5em auto auto;
+    }
+}
